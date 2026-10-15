@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import hero from '../assets/hero.png'
 
 const Navbar = () => {
+   const navigate = useNavigate();
   return (
     <div className="absolute top-0 left-0 w-full z-10">
       <div  >
@@ -11,7 +13,7 @@ const Navbar = () => {
                 <li><a href="#About" className="cursor-pointer hover:text-gray-400">About</a></li>
                 <li><a href="#Projects" className="cursor-pointer hover:text-gray-400">Projects</a></li>
                 <li><a href="#Testimonials" className="cursor-pointer hover:text-gray-400">Testimonials</a></li>
-            <button className=" bg-blue-500 text-white px-8 py-2 rounded-full hover:bg-blue-600">Sign up</button> 
+            <button  onClick={() => navigate('/login')} className=" bg-blue-500 text-white px-8 py-2 rounded-full hover:bg-blue-600">Register</button> 
             </ul>
 
 
